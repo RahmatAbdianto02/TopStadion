@@ -14,8 +14,15 @@ import com.dicoding.topstadion.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        fun getLayoutResourceId(): Int {
+            return R.layout.activity_detail
+        }
+    }
+
     private lateinit var binding: ActivityMainBinding
     private lateinit var rvStadion: RecyclerView
+    private lateinit var listStadionAdapter: ListStadionAdapter
     private val list = ArrayList<Stadion>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +31,8 @@ class MainActivity : AppCompatActivity() {
 
         rvStadion = findViewById(R.id.rv_stadi)
         rvStadion.setHasFixedSize(true)
+        rvStadion.layoutManager =LinearLayoutManager(this)
+
 
         list.addAll(getListStadion())
         showRecyclerList()
@@ -58,6 +67,7 @@ class MainActivity : AppCompatActivity() {
             val stadion = Stadion(dataName[i],dataDescription[i],dataPhoto.getResourceId(i, -1))
             listStadion.add(stadion)
         }
+        dataPhoto.recycle()
         return listStadion
     }
 

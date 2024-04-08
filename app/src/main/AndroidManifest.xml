@@ -13,6 +13,10 @@
         android:theme="@style/Theme.TopStadion"
         tools:targetApi="31">
         <activity
+            android:name=".DetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TopStadion" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
