@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">TopStadion</string>
+
+    <string name="heroes_stadion">Nama Stadion</string>
+    <string name="description">Deskripsi</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+
+    <string-array name="data_name">
+        <item>Anfield</item>
+        <item>Emirates</item>
+        <item>Sansiro</item>
+        <item>Stamford</item>
+    </string-array>
+
+    <string-array name="data_description">
+        <item>Ini anfield</item>
+        <item>Ini Emirates</item>
+        <item>Ini sansiro</item>
+        <item>Ini stamford</item>
+    </string-array>
+
+    <integer-array name="data_photo">
+        <item>@drawable/anfield</item>
+        <item>@drawable/emirates</item>
+        <item>@drawable/sansiro</item>
+        <item>@drawable/stamford</item>
+
+    </integer-array>
+</resources>
